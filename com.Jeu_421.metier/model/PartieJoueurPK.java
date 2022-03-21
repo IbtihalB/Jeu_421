@@ -12,10 +12,10 @@ public class PartieJoueurPK implements Serializable {
 	//default serial version id, required for serializable classes.
 	private static final long serialVersionUID = 1L;
 
-	@Column(insertable=false, updatable=false, unique=true, nullable=false, length=40)
+	@Column( unique=true, nullable=false, length=40)
 	private String ID_joueur;
 
-	@Column(insertable=false, updatable=false, unique=true, nullable=false)
+	@Column( unique=true, nullable=false)
 	private int ID_partie;
 
 	public PartieJoueurPK() {

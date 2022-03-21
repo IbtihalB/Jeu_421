@@ -14,12 +14,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.Jeu_421.DAO.DaoFactory;
-
-import model.Joueur;
 
 
 
+import com.Jeu_421.*;;
 
 @WebServlet("/Accueil")
 public class Accueil extends HttpServlet {
@@ -67,10 +65,10 @@ public class Accueil extends HttpServlet {
 	   
 	    
 	   
-	    Joueur joeur1=new Joueur("jnjk","djkndk");
+	  model.Joueur joeur1=new model.Joueur("jnjk","djkndk");
 		em.persist(joeur1);
 		
-	    Joueur personne = em.find(Joueur.class,"b1" );
+	    model.Joueur personne = em.find(model.Joueur.class,"b1" );
 	    request.setAttribute("personne",personne.getMotDePasse());
 		request.getRequestDispatcher("./vues/Accueil.jsp").forward(request,response);
 

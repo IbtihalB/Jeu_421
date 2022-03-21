@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+        
     <wb-module deploy-name="Jeu_421">
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+                
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/com.Jeu_421.metier"/>
+                
         <property name="context-root" value="Jeu_421"/>
+                
         <property name="java-output-path" value="/Jeu_421/bin"/>
+            
     </wb-module>
+    
 </project-modules>

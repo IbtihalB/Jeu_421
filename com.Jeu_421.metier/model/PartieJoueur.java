@@ -31,12 +31,12 @@ public class PartieJoueur implements Serializable {
 
 	//bi-directional many-to-one association to Joueur
 	@ManyToOne
-	@JoinColumn(name="ID_joueur", nullable=false)
+	@JoinColumn(name="ID_joueur", nullable=false, insertable=false, updatable=false)
 	private Joueur joueur;
 
 	//bi-directional many-to-one association to Partie
 	@ManyToOne
-	@JoinColumn(name="ID_partie", nullable=false)
+	@JoinColumn(name="ID_partie", nullable=false, insertable=false, updatable=false)
 	private Partie partie;
 
 	public PartieJoueur() {
