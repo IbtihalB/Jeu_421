@@ -74,6 +74,8 @@ public class Joueur implements JpaEntity {
 		this.motDePasse=mot_passe;
 	}
 
+	
+
 	public String getPseudo() {
 		return this.pseudo;
 	}

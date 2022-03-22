@@ -22,15 +22,12 @@ public abstract class JpaDaoImpl<T extends JpaEntity, ID> implements JpaDao<T, I
 
     static {
         entityManagerFactory = Persistence.createEntityManagerFactory("Jeu_421");
-        
-          
+                  
     }
-
 
     public JpaDaoImpl() {
 
-        this.persistentClass = (Class<T>) ((ParameterizedType) getClass()
-                .getGenericSuperclass()).getActualTypeArguments()[0];
+        this.persistentClass = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
 
         FIND_ALL = "select e from " + persistentClass.getSimpleName() + " e";
     }

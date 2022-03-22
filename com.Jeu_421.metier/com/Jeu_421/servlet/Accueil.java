@@ -19,7 +19,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.Jeu_421.*;
 import com.Jeu_421.DAO.JoueurDaoImpl;
-import com.Jeu_421.DAO.JpaDaoImpl;;
+import com.Jeu_421.DAO.JpaDaoImpl;
+
+import model.Joueur;;
 
 @WebServlet("/Accueil")
 public class Accueil extends HttpServlet {
@@ -63,10 +65,15 @@ public class Accueil extends HttpServlet {
 	        System.out.println("Personne non trouvée");}
 		request.setAttribute("personne",noms);*/
 	
-
+		
+		 
 		JoueurDaoImpl personne= new JoueurDaoImpl ();
-	    request.setAttribute("personne",personne.findById("b2").getMotDePasse());
-		request.getRequestDispatcher("./vues/Accueil.jsp").forward(request,response);
+		Joueur  personne2= new Joueur ("bx","hihi");
+		JoueurDaoImpl x= new JoueurDaoImpl ();
+		 x.save(personne2) ;
+		 
+		 request.setAttribute("personne",x.findById("bx").getMotDePasse());
+		 request.getRequestDispatcher("./vues/Accueil.jsp").forward(request,response);
 
 	}
 
