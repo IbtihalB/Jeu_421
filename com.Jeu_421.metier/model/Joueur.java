@@ -13,7 +13,7 @@ import java.util.List;
 @Entity
 @Table(name="joueur")
 @NamedQuery(name="Joueur.findAll", query="SELECT j FROM Joueur j")
-public class Joueur implements Serializable {
+public class Joueur implements JpaEntity {
 	private static final long serialVersionUID = 1L;
 
 	@Id

@@ -12,7 +12,7 @@ import java.util.List;
 @Entity
 @Table(name="partie")
 @NamedQuery(name="Partie.findAll", query="SELECT p FROM Partie p")
-public class Partie implements Serializable {
+public class Partie implements JpaEntity {
 	private static final long serialVersionUID = 1L;
 
 	@Id

@@ -17,7 +17,9 @@ import javax.servlet.http.HttpServletResponse;
 
 
 
-import com.Jeu_421.*;;
+import com.Jeu_421.*;
+import com.Jeu_421.DAO.JoueurDaoImpl;
+import com.Jeu_421.DAO.JpaDaoImpl;;
 
 @WebServlet("/Accueil")
 public class Accueil extends HttpServlet {
@@ -60,16 +62,10 @@ public class Accueil extends HttpServlet {
 	    if (personne == null) {
 	        System.out.println("Personne non trouvée");}
 		request.setAttribute("personne",noms);*/
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("Jeu_421");
-	    EntityManager em = emf.createEntityManager();
-	   
-	    
-	   
-	  model.Joueur joeur1=new model.Joueur("jnjk","djkndk");
-		em.persist(joeur1);
-		
-	    model.Joueur personne = em.find(model.Joueur.class,"b1" );
-	    request.setAttribute("personne",personne.getMotDePasse());
+	
+
+		JoueurDaoImpl personne= new JoueurDaoImpl ();
+	    request.setAttribute("personne",personne.findById("b2").getMotDePasse());
 		request.getRequestDispatcher("./vues/Accueil.jsp").forward(request,response);
 
 	}

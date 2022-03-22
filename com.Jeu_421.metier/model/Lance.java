@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Entity
 @Table(name="lances")
 @NamedQuery(name="Lance.findAll", query="SELECT l FROM Lance l")
-public class Lance implements Serializable {
+public class Lance implements JpaEntity {
 	private static final long serialVersionUID = 1L;
 
 	@Id

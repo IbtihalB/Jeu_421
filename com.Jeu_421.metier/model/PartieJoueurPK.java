@@ -8,7 +8,7 @@ import javax.persistence.*;
  * 
  */
 @Embeddable
-public class PartieJoueurPK implements Serializable {
+public class PartieJoueurPK implements JpaEntity {
 	//default serial version id, required for serializable classes.
 	private static final long serialVersionUID = 1L;
 

@@ -11,7 +11,7 @@ import java.util.List;
 @Entity
 @Table(name="tour")
 @NamedQuery(name="Tour.findAll", query="SELECT t FROM Tour t")
-public class Tour implements Serializable {
+public class Tour implements JpaEntity {
 	private static final long serialVersionUID = 1L;
 
 	@Id

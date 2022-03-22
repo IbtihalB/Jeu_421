@@ -12,7 +12,7 @@ import java.sql.Timestamp;
 @Entity
 @Table(name="partie_joueurs")
 @NamedQuery(name="PartieJoueur.findAll", query="SELECT p FROM PartieJoueur p")
-public class PartieJoueur implements Serializable {
+public class PartieJoueur implements JpaEntity {
 	private static final long serialVersionUID = 1L;
 
 	@EmbeddedId
